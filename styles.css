@@ -1,1 +1,72 @@
 /*Maak hier jouw CSS!*/
+*{
+    background-color: blanchedalmond;
+    color: white;
+}
+.container{
+    background-color: blanchedalmond;
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 50px auto 50px 50px 50px 50px;
+    grid-template-areas:
+        "header"
+        "main"
+        "c"
+        "d"
+        "e"
+        "..."
+        "footer";
+}
+.grid-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 15px;
+}
+#header{
+    background-color: indianred;
+    grid-area: header;
+    border: 3px brown solid;
+}
+#main{
+    background-color: indianred;
+    grid-area: main;
+    border: 3px brown solid;
+    align-items: initial;
+}
+#c{
+    background-color: indianred;
+    grid-area: c;
+    border: 3px brown solid;
+}
+#d{
+    background-color: indianred;
+    grid-area: d;
+    border: 3px brown solid;
+}
+#e{
+    background-color: indianred;
+    grid-area: e;
+    border: 3px brown solid;
+}
+#footer{
+     background-color: indianred;
+     grid-area: footer;
+    border: 3px brown solid;
+ }
+@media screen and (min-width: 576px) {
+    /*dit is de desktop grid okiiii*/
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+            "header c c"
+            "main c c"
+            "main e d"
+            "main e ..."
+            "footer footer footer";
+    }
+}
