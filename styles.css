@@ -4,6 +4,7 @@
     color: white;
 }
 .container{
+    /*Dit is de grid voor telefoongebruikers*/
     background-color: blanchedalmond;
     display: grid;
     grid-gap: 16px;
@@ -18,6 +19,7 @@
         "..."
         "footer";
 }
+
 .grid-item{
     display: flex;
     flex-direction: row;
@@ -25,40 +27,30 @@
     align-items: center;
     text-align: left;
     padding: 15px;
+    border: 3px brown solid;
+    background-color: indianred;
 }
 #header{
-    background-color: indianred;
     grid-area: header;
-    border: 3px brown solid;
 }
 #main{
-    background-color: indianred;
     grid-area: main;
-    border: 3px brown solid;
     align-items: initial;
 }
 #c{
-    background-color: indianred;
     grid-area: c;
-    border: 3px brown solid;
 }
 #d{
-    background-color: indianred;
     grid-area: d;
-    border: 3px brown solid;
 }
 #e{
-    background-color: indianred;
     grid-area: e;
-    border: 3px brown solid;
 }
 #footer{
-     background-color: indianred;
      grid-area: footer;
-    border: 3px brown solid;
  }
 @media screen and (min-width: 576px) {
-    /*dit is de desktop grid okiiii*/
+    /*Dit is de desktop grid okiiii*/
     .container {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 50px 190px 100px auto 50px;
